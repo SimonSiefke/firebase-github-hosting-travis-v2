@@ -30,7 +30,7 @@ module.exports = {
         new criticalPlugin({
           base: "dist/",
           src: "index.html",
-          dest: "index.min.html",
+          dest: "index.html",
           inline: true,
           minify: true,
           extract: true,
