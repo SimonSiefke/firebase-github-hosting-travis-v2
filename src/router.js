@@ -1,22 +1,21 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: () =>
-        import(/* webpackChunkName: "home" */ './views/Home.vue'),
+      path: "/",
+      name: "home",
+      component: () => import(/* webpackChunkName: "home" */ "./views/Home.vue")
     },
     {
-      path: '/about',
-      name: 'about',
+      path: "/about",
+      name: "about",
       component: () =>
-        import(/* webpackChunkName: "about" */ './views/About.vue'),
-    },
-  ],
-})
+        import(/* webpackChunkName: "about" */ "./views/About.vue")
+    }
+  ]
+});
