@@ -1,15 +1,9 @@
 language: node_js
 node_js:
-- 8.4.0
-branches:
-  only:
-  - master
-before_deploy:
-- echo 'ready?'
-- npm run build
-deploy:
-  skip_cleanup: true
-  provider: firebase
-  token:
-    secure: "d7Fup5p07IV2CrXHtH2fy9FXmo6YmvaSfy5yKpq48uJVYEjjX1fX7E+NlW7yqb6XybF92a6mDPyCgud3nz90enr1Yg+Q7eIhtEEJ+NLTxR3HhV+kSBTaafTjcQ9P3HyV0YXLW7AKvALFyd+49y0aArhzlv0BhJBpKVY774ROy0CK/nl85i008c3ftOkmRDQVdYVv3muJRT8XCQUnQ2Ekw58tXryb4XWFOGkoNWoenrXuX13irdPy3Ibv5vNK1vlC/+Q/W2ehvWOO7z5oVoAi4AT0HK0760pVVMeAwbFdy8JnJ3hHW91OlAluISdeP+5/RbdQlNpiNomY7Ax2Y8jqjYzjQjkSsSeUlHkn3a5+ZDtjh/MBazaBXVEqvthiCMnv/tJtZ42hMc1rM7aCprIWRp+J7B7cF9Qxk1IMzMRaSMBTRonQCKh6BKY7g5cHNEo1398kZcEzihY42CfHsXNxS6Vd/L1Prm9VJbPYftG2T3tmr1XlIiGQf0QsvIqMtuWArrjmmOOxUjwXZUry7uNZNJIdOK7JNUavffUu1GybEy9qITSDj8AJ1YIesS0TDVmss1vTarVaAgHWBCYu7LKT7Aq597jTJJZCwmtYriS+5XLyU5/vOVW2gS0mJSYEeVWMg++7Zy9t2jgMnWe9pip2w87s0gFL7Ct/FMetAEofjFc="
-  project: hostingv2
+  - "8.4.0"
+install:
+  - npm install -g firebase-tools
+script:
+  - npm run build
+after_success:
+firebase deploy --token $FIREBASE_TOKEN
