@@ -3,6 +3,7 @@
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "trailingSlash": false,
+    "cleanUrls": true,
     "rewrites": [
       {
         "source": "**/*.html",
