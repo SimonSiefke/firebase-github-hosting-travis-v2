@@ -6,7 +6,7 @@
     "trailingSlash": false,
     "rewrites": [
       {
-        "source": "**",
+        "source": "**/*.html",
         "destination": "/index.html"
       }
     ]
