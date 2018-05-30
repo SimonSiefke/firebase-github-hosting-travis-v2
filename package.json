@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "lh": "lighthouse-ci --score=98"
+    "lh": "lighthouse-ci"
   },
   "dependencies": {
     "prerender-spa-plugin": "^3.1.0",

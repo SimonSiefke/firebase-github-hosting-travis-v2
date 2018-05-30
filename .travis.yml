@@ -9,4 +9,4 @@ script:
 after_success:
   # - firebase deploy --token $FIREBASE_TOKEN --project hostingv2
   - firebase deploy --token $FIREBASE_TOKEN --project staging
-  - npm run lh $STAGING_URL
+  - npm run lh --score=96 $STAGING_URL
