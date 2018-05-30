@@ -7,7 +7,8 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lh": "lighthouse-ci"
   },
   "dependencies": {
     "prerender-spa-plugin": "^3.1.0",
@@ -24,6 +25,7 @@
     "@vue/eslint-config-prettier": "^3.0.0-beta.9",
     "critical": "^1.3.0",
     "html-string-replace-webpack-plugin": "^1.0.5",
+    "lighthouse-ci": "https://github.com/ebidel/lighthouse-ci",
     "lint-staged": "^6.0.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",

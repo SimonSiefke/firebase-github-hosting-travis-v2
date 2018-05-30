@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "staging": "fir-github-travis-staging",
+    "default": "hostingv2"
+  }
+}

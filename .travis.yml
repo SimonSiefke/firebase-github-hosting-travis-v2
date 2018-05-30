@@ -7,4 +7,6 @@ install:
 script:
   - npm run build
 after_success:
-  - firebase deploy --token $FIREBASE_TOKEN --project hostingv2
+  # - firebase deploy --token $FIREBASE_TOKEN --project hostingv2
+  - firebase deploy --token $FIREBASE_TOKEN --project staging
+  - npm run lh https://fir-github-travis-staging.firebaseapp.com/
