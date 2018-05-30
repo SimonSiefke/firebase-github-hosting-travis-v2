@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home Page 678</router-link> |
+      <router-link to="/">Home Page 6789</router-link> |
       <router-link to="/about">About this page</router-link>
     </div>
     <router-view/>
