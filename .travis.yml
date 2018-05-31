@@ -9,4 +9,4 @@ script:
 after_success:
   # - firebase deploy --token $FIREBASE_TOKEN --project hostingv2
   - firebase deploy --token $FIREBASE_TOKEN --project staging
-  - npm run lh https://fir-github-travis-staging.firebaseapp.com/
+  - npm run lh --score=96 --runner=wpt $STAGING_URL
