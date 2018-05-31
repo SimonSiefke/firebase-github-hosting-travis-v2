@@ -1,12 +1,13 @@
 language: node_js
+
 node_js:
   - "8.4.0"
+
 install:
   - npm install
   - npm install -g firebase-tools
+
 script:
   - npm run build
-after_success:
-  # - firebase deploy --token $FIREBASE_TOKEN --project hostingv2
-  - firebase deploy --token $FIREBASE_TOKEN --project staging
-  - npm run lh --score=96 --runner=wpt $STAGING_URL
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis/run_on_pull_requests; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis/run_on_master; fi'
