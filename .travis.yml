@@ -6,7 +6,11 @@ install:
   - npm install -g firebase-tools
 script:
   - npm run build
+cache:
+  yarn: true
+  directories:
+    - node_modules
 after_success:
   # - firebase deploy --token $FIREBASE_TOKEN --project hostingv2
   - firebase deploy --token $FIREBASE_TOKEN --project staging
-  - npm run lh --score=96 --runner=wpt $STAGING_URL
+  - npm run lh $STAGING_URL
