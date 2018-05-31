@@ -1,0 +1,3 @@
+# Issues
+
+* [ ] serviceworker no caching
