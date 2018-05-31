@@ -9,4 +9,4 @@ script:
 after_success:
   # - firebase deploy --token $FIREBASE_TOKEN --project hostingv2
   - firebase deploy --token $FIREBASE_TOKEN --project staging
-  - npm run lh --score=100 --runner=wpt $STAGING_URL
+  - npm run lh --score=100 $STAGING_URL
