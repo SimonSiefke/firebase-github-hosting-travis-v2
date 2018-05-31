@@ -11,3 +11,8 @@ script:
   - npm run build
   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis/run_on_pull_requests; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis/run_on_master; fi'
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
