@@ -6,7 +6,10 @@ install:
   - npm install -g firebase-tools
 script:
   - npm run build
-cache: yarn
+cache:
+  yarn: true
+  directories:
+    - node_modules
 after_success:
   # - firebase deploy --token $FIREBASE_TOKEN --project hostingv2
   - firebase deploy --token $FIREBASE_TOKEN --project staging
