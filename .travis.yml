@@ -12,6 +12,10 @@ script:
   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis/run_on_pull_requests.sh; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis/run_on_master.sh; fi'
 
+branches:
+  only:
+  - master
+
 cache:
   yarn: true
   directories:
